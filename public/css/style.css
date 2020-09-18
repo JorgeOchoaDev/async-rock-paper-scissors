@@ -2,6 +2,8 @@
   width: 33.3%;
   margin: 0px 1rem;
   height: 30vh;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
 }
 
 .options-wrapper label {
@@ -66,7 +68,38 @@
           mask-position: center;
 }
 
-.options-wrapper label + input {
+.options-wrapper input[type="radio"] {
   display: none;
+}
+
+.options-wrapper input[type="radio"]:checked + label {
+  background-color: darkgreen;
+}
+
+.options-wrapper input[type="radio"]:checked + label[for="rock"] {
+  -webkit-mask: url("../assets/hand-rock-solid.svg");
+          mask: url("../assets/hand-rock-solid.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.options-wrapper input[type="radio"]:checked + label[for="paper"] {
+  -webkit-mask: url("../assets/hand-paper-solid.svg");
+          mask: url("../assets/hand-paper-solid.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.options-wrapper input[type="radio"]:checked + label[for="scissors"] {
+  -webkit-mask: url("../assets/hand-scissors-solid.svg");
+          mask: url("../assets/hand-scissors-solid.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
 }
 /*# sourceMappingURL=style.css.map */

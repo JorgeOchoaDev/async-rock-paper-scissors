@@ -84,5 +84,6 @@ document.getElementById("go-button").addEventListener("click", () => {
     }else{
         gamesRef.child(currentGame).update({ player2Hand: selectedOption})
     }
+    $(".option-radio").not(":checked").closest(".option-item").addClass("d-none")
 })
 
