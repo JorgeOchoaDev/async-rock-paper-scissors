@@ -1,40 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 </head>
+
 <body>
-  
+
   <button id="new-game">Crear nueva partida</button>
   <h3 id="game-key-val"></h3>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-6"></div>
+      <div class="col-12 col-md-6">
+        <h1 class="text-center">¿Piedra, papel ó tijeras?</h1>
+        <div class="options-wrapper d-flex justify-content-between">
+          <div class="option-item">
+            <label for="">Piedra</label>
+            <input type="radio" name="option" value="rock" class="option-radio" checked>
+          </div>
+          <div class="option-item">
+            <label for="">Papel</label>
+            <input type="radio" name="option" value="paper" class="option-radio">
+          </div>
+          <div class="option-item">
+            <label for="">Tijeras</label>
+            <input type="radio" name="option" value="scissors" class="option-radio">
+          </div>
+        </div>
+        <div id="go-button" class="btn btn-success">Go!</div>
+      </div>
+    </div>
+  </div>
 
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-app.js"></script>
 
 
-    <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.2.0/firebase-database.js"></script>
 
 
 
-<!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
      https://firebase.google.com/docs/web/setup#available-libraries -->
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyAZfV2P5h8y2vm0duT0y_TsVk1CP8WpYiM",
-    authDomain: "rock-paper-scissors-dd989.firebaseapp.com",
-    databaseURL: "https://rock-paper-scissors-dd989.firebaseio.com",
-    projectId: "rock-paper-scissors-dd989",
-    storageBucket: "rock-paper-scissors-dd989.appspot.com",
-    messagingSenderId: "69691972201",
-    appId: "1:69691972201:web:5b7367109ea7da0a29a0f8"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-</script>
-<script src="js/main.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyAZfV2P5h8y2vm0duT0y_TsVk1CP8WpYiM",
+      authDomain: "rock-paper-scissors-dd989.firebaseapp.com",
+      databaseURL: "https://rock-paper-scissors-dd989.firebaseio.com",
+      projectId: "rock-paper-scissors-dd989",
+      storageBucket: "rock-paper-scissors-dd989.appspot.com",
+      messagingSenderId: "69691972201",
+      appId: "1:69691972201:web:5b7367109ea7da0a29a0f8"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+    integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+    integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+    crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
 </body>
+
 </html>
