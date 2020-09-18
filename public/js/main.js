@@ -14,23 +14,34 @@ const gameStateChecker = (gameState) => {
     let gameComplete = player1Hand && player2Hand ? true : false
     if( gameComplete && player1Hand === "rock" && player2Hand === "rock"){
         console.log("empate")
+        document.querySelector("#result-modal .modal-title").innerHTML = "empate"
     } else if ( gameComplete && player1Hand === "rock" && player2Hand === "scissors" ){
         console.log("jugador 1 gana")
+        document.querySelector("#result-modal .modal-title").innerHTML = "jugador 1 gana"
     } else if ( gameComplete && player1Hand === "rock" && player2Hand === "paper" ){
         console.log("jugador 2 gana")
+        document.querySelector("#result-modal .modal-title").innerHTML = "jugador 2 gana"
     } else if ( gameComplete && player1Hand === "paper" && player2Hand === "paper" ){
         console.log("empate")
+        document.querySelector("#result-modal .modal-title").innerHTML = "jugador 2 gana"
     } else if ( gameComplete && player1Hand === "paper" && player2Hand === "scissors" ){
         console.log("jugador 2 gana")
+        document.querySelector("#result-modal .modal-title").innerHTML = "jugador 2 gana"
     } else if ( gameComplete && player1Hand === "paper" && player2Hand === "rock" ){
         console.log("jugador 1 gana")
+        document.querySelector("#result-modal .modal-title").innerHTML = "jugador 1 gana"
     } else if ( gameComplete && player1Hand === "scissors" && player2Hand === "rock" ){
         console.log("jugador 2 gana")
+        document.querySelector("#result-modal .modal-title").innerHTML = "jugador 2 gana"
     } else if ( gameComplete && player1Hand === "scissors" && player2Hand === "scissors" ){
         console.log("empate")
+        document.querySelector("#result-modal .modal-title").innerHTML = "empate"
     } else if ( gameComplete && player1Hand === "scissors" && player2Hand === "paper" ){
         console.log("jugador 1 gana")
+        document.querySelector("#result-modal .modal-title").innerHTML = "jugador 1 gana"
     }
+    gameComplete && player1Hand && player2Hand ? $("#result-modal").modal("show") : null
+    
 }
 
 
