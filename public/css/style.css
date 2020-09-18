@@ -1,0 +1,72 @@
+.options-wrapper .option-item {
+  width: 33.3%;
+  margin: 0px 1rem;
+  height: 30vh;
+}
+
+.options-wrapper label {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  cursor: pointer;
+}
+
+.options-wrapper label[for="rock"] {
+  -webkit-mask: url("../assets/hand-rock-light.svg");
+          mask: url("../assets/hand-rock-light.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.options-wrapper label[for="rock"]:hover {
+  -webkit-mask: url("../assets/hand-rock-solid.svg");
+          mask: url("../assets/hand-rock-solid.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.options-wrapper label[for="scissors"] {
+  -webkit-mask: url("../assets/hand-scissors-light.svg");
+          mask: url("../assets/hand-scissors-light.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.options-wrapper label[for="scissors"]:hover {
+  -webkit-mask: url("../assets/hand-scissors-solid.svg");
+          mask: url("../assets/hand-scissors-solid.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.options-wrapper label[for="paper"] {
+  -webkit-mask: url("../assets/hand-paper-light.svg");
+          mask: url("../assets/hand-paper-light.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.options-wrapper label[for="paper"]:hover {
+  -webkit-mask: url("../assets/hand-paper-solid.svg");
+          mask: url("../assets/hand-paper-solid.svg");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+}
+
+.options-wrapper label + input {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */
