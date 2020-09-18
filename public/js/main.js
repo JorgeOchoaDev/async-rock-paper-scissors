@@ -63,7 +63,7 @@ document.getElementById("join-game").addEventListener('click', () =>{
     let joinedGameRef = database.ref(`/games/${gameID}`)
     joinedGameRef.on("value", snapshot => {
         console.log("game state", snapshot.val())
-        gameStateChecker(snapshot.val)
+        gameStateChecker(snapshot.val())
     })
     joinedGameRef.update({player2Ready: true})
 })
