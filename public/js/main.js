@@ -9,9 +9,28 @@ let player
 })*/
 
 const gameStateChecker = (gameState) => {
-    let gameComplete = gameState.player1Hand && gameState.player2Hand ? true : false
-    
+    let { player1Hand, player2Hand } = gameState
+    let gameComplete = player1Hand && player2Hand ? true : false
+    if( gameComplete && player1Hand === "rock" && player2Hand === "rock"){
+        console.log("empate")
+    } else if ( gameComplete && player1Hand === "rock" && player2Hand === "scissors" ){
+        console.log("jugador 1 gana")
+    } else if ( gameComplete && player1Hand === "rock" && player2Hand === "paper" ){
+        console.log("jugador 2 gana")
+    } else if ( gameComplete && player1Hand === "paper" && player2Hand === "paper" ){
+        console.log("empate")
+    } else if ( gameComplete && player1Hand === "paper" && player2Hand === "scissors" ){
+        console.log("jugador 2 gana")
+    } else if ( gameComplete && player1Hand === "paper" && player2Hand === "rock" ){
+        console.log("jugador 1 gana")
+    } else if ( gameComplete && player1Hand === "scissors" && player2Hand === "rock" ){
+        console.log("jugador 2 gana")
+    } else if ( gameComplete && player1Hand === "scissors" && player2Hand === "scissors" ){
+        console.log("empate")
+    } else if ( gameComplete && player1Hand === "scissors" && player2Hand === "paper" ){
+        console.log("jugador 1 gana")
     }
+}
 
 
 document.getElementById("new-game").addEventListener("click", ()=>{
