@@ -9,6 +9,7 @@ let player
 })*/
 
 const gameStateChecker = (gameState) => {
+    console.log("cheking game state")
     let { player1Hand, player2Hand } = gameState
     let gameComplete = player1Hand && player2Hand ? true : false
     if( gameComplete && player1Hand === "rock" && player2Hand === "rock"){
@@ -38,9 +39,9 @@ document.getElementById("new-game").addEventListener("click", ()=>{
     let gameKey = gamesRef.push({player1Ready: true}).key
     document.getElementById("game-key-val").innerHTML = `Tu id de juego es: ${gameKey}`
     currentGame = gameKey
-    let myGameRef = database.ref(`/games/${currentGame}`).on("value", snapshot => {
+    database.ref(`/games/${currentGame}`).on("value", snapshot => {
         console.log("game state", snapshot.val())
-        gameStateChecker(snapshot.val)
+        gameStateChecker(snapshot.val())
     })
 })
 
