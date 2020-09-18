@@ -23,7 +23,7 @@ const gameStateChecker = (gameState) => {
         document.querySelector("#result-modal .modal-title").innerHTML = "jugador 2 gana"
     } else if ( gameComplete && player1Hand === "paper" && player2Hand === "paper" ){
         console.log("empate")
-        document.querySelector("#result-modal .modal-title").innerHTML = "jugador 2 gana"
+        document.querySelector("#result-modal .modal-title").innerHTML = "empate"
     } else if ( gameComplete && player1Hand === "paper" && player2Hand === "scissors" ){
         console.log("jugador 2 gana")
         document.querySelector("#result-modal .modal-title").innerHTML = "jugador 2 gana"
@@ -59,13 +59,15 @@ document.getElementById("new-game").addEventListener("click", ()=>{
 document.getElementById("join-game").addEventListener('click', () =>{
     player = 2
     let gameID = document.getElementById("game-id").value
-    currentGame = gameID
     let joinedGameRef = database.ref(`/games/${gameID}`)
+    joinedGameRef.update({player2Ready: true})
+    
+    currentGame = gameID
     joinedGameRef.on("value", snapshot => {
         console.log("game state", snapshot.val())
         gameStateChecker(snapshot.val())
     })
-    joinedGameRef.update({player2Ready: true})
+    
 })
 
 document.querySelectorAll(".option-radio").forEach( radio => {
